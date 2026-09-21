@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Independent PhonePe Pulse product proof-of-work by Jainil Trivedi." />
+  <title>PhonePe Growth Atlas — Maharashtra Q2 2026</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="kicker">PRODUCT PROOF OF WORK</div>
+      <div class="brand">PhonePe Growth Atlas</div>
+    </div>
+    <div class="top-actions">
+      <span class="tag">Maharashtra · Q2 2026</span>
+      <a href="PhonePe_Growth_Thesis_Q2_2026.pdf" class="link-btn">1-page thesis ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Independent analysis using public PhonePe Pulse data</div>
+        <h1>Where should PhonePe test the next merchant-growth experiment?</h1>
+        <p class="lede">I looked for districts where transaction intensity is strong relative to merchant density, then layered in quarter-over-quarter momentum. The output is not a prediction. It is a prioritization hypothesis designed to be tested.</p>
+      </div>
+      <div class="hero-card">
+        <div class="mini">THE PRODUCT QUESTION</div>
+        <p>Can we identify Maharashtra districts where consumer payment demand appears stronger than acceptance-side density, then design a measurable merchant activation experiment?</p>
+      </div>
+    </section>
+
+    <section class="metrics-grid">
+      <div class="metric"><span>57.4</span><small>Q2 transactions / registered user<br/>Maharashtra district mean</small></div>
+      <div class="metric"><span>60.9</span><small>registered merchants / 1K users<br/>Maharashtra district mean</small></div>
+      <div class="metric"><span>+6.0%</span><small>mean district transaction growth<br/>Q1 → Q2 2026</small></div>
+      <div class="metric accent"><span>5</span><small>districts selected for<br/>experiment design</small></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">SIGNAL MAP</div>
+          <h2>Demand vs. acceptance</h2>
+        </div>
+        <div class="legend"><span class="dot priority"></span> priority district <span class="dot normal"></span> benchmark</div>
+      </div>
+      <p class="helper">Higher on the chart = more Q2 transactions per registered user. Further left = fewer registered merchants per 1,000 registered users. The upper-left quadrant is the interesting zone.</p>
+      <div class="scatter-wrap">
+        <svg id="scatter" viewBox="0 0 900 470" role="img" aria-label="District scatter plot"></svg>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">PRIORITY SET</div>
+          <h2>Five places I would test first</h2>
+        </div>
+        <div class="formula">Gap = demand index − acceptance index</div>
+      </div>
+      <div id="districtCards" class="district-grid"></div>
+    </section>
+
+    <section class="experiment">
+      <div class="experiment-copy">
+        <div class="eyebrow light">EXPERIMENT DESIGN</div>
+        <h2>Merchant Activation Sprint</h2>
+        <p>Do not assume low merchant density is the problem. Test whether a tighter acquisition-to-first-transaction journey increases activated merchants in high-demand districts.</p>
+      </div>
+      <div class="experiment-grid">
+        <div><span>01</span><h3>Target</h3><p>New or recently onboarded merchants in the selected districts, stratified by category and baseline activity.</p></div>
+        <div><span>02</span><h3>Variant</h3><p>Faster activation sequence: guided QR setup, first-transaction nudge, education, and timed follow-up.</p></div>
+        <div><span>03</span><h3>Primary metric</h3><p>Share of onboarded merchants completing a first qualified transaction within 7 days.</p></div>
+        <div><span>04</span><h3>Secondary</h3><p>30-day active merchant rate, transactions per activated merchant, time-to-first-transaction.</p></div>
+        <div><span>05</span><h3>Guardrails</h3><p>Fraud/risk flags, support contacts per merchant, incentive cost, merchant opt-out/churn.</p></div>
+        <div><span>06</span><h3>Rollout</h3><p>5% holdout → 20% → 50%; expand only if activation lift persists without guardrail deterioration.</p></div>
+      </div>
+    </section>
+
+    <section class="panel method">
+      <div>
+        <div class="eyebrow">METHOD</div>
+        <h2>What the model actually does</h2>
+      </div>
+      <div class="method-grid">
+        <div><b>Demand index</b><p>District transactions per registered user ÷ Maharashtra district mean.</p></div>
+        <div><b>Acceptance index</b><p>District registered merchants per 1,000 registered users ÷ Maharashtra district mean.</p></div>
+        <div><b>Gap</b><p>Demand index minus acceptance index. Positive values flag demand that is high relative to registered merchant density.</p></div>
+        <div><b>Momentum</b><p>Q2 transaction count compared with Q1 2026 using the same restated Pulse release.</p></div>
+      </div>
+      <div class="caveat"><strong>Important:</strong> registered users and registered merchants are cumulative registered counts, not active-user or active-merchant measures. This analysis is a hypothesis generator, not causal proof or a production recommendation.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Jainil Trivedi</strong> · Product / AI Systems / Analytics · Jainiltrivedi17@gmail.com · +91 63548 09722</div>
+    <div>Source: PhonePe Pulse public data, Q1–Q2 2026. Independent project; not affiliated with PhonePe.</div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
